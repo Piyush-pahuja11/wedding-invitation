@@ -14,7 +14,7 @@ const wedding = {
   // Example format: "919876543210" (India) or "14165551234" (Canada).
   whatsappNumber: "YOUR_WHATSAPP_NUMBER",
   // Optional: add a direct MP3 URL for background music.
-  musicUrl: ""
+  musicUrl: "./pictures/audios/Satranga.mp3"
 };
 
 const byId = (id) => document.getElementById(id);
