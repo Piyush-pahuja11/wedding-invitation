@@ -20,7 +20,7 @@
     background:
       radial-gradient(ellipse at 50% 45%, rgba(112, 54, 53, .5), transparent 52%),
       linear-gradient(145deg, rgba(30, 8, 14, .96), rgba(59, 23, 29, .98)),
-      url("./pictures/hands.jpeg") center / cover no-repeat;
+      url("./pictures/new/9.jpg") center / cover no-repeat;
     opacity: 1; visibility: visible; transition: opacity .65s ease, visibility .65s ease;
   }
   .welcome-screen[hidden] { display: none; }
@@ -45,7 +45,7 @@
   .welcome-footer { color: var(--gold); margin-top: 38px; font-size: 8px; }
   @keyframes welcomeRise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
   
-  .hero { min-height: 100svh; position: relative; display: flex; align-items: center; justify-content: center; color: #fff8ed; text-align: center; background: linear-gradient(180deg, rgba(31,10,15,.48), rgba(45,14,20,.8)), url("./pictures/hands.jpeg") center / cover no-repeat; overflow: hidden; }
+  .hero { min-height: 100svh; position: relative; display: flex; align-items: center; justify-content: center; color: #fff8ed; text-align: center; background: linear-gradient(180deg, rgba(31,10,15,.48), rgba(45,14,20,.8)), url("./pictures/new/9.jpg") center / cover no-repeat; overflow: hidden; }
   .hero::before { content: ""; position: absolute; inset: 18px; border: 1px solid rgba(219,187,128,.7); pointer-events: none; }
   .hero::after { content: "✧"; position: absolute; top: 30px; left: 50%; transform: translateX(-50%); color: var(--gold); font-size: 23px; }
   .top-nav { position: absolute; top: 42px; left: 7%; right: 7%; display: flex; justify-content: space-between; align-items: center; letter-spacing: .2em; font-size: 10px; z-index: 2; }
@@ -107,7 +107,7 @@
   .text-link:hover { color: var(--wine); }
   .timeline-note { margin: 34px auto 0; color: #8b704e; font-family: "Cormorant Garamond",serif; font-size: 20px; }
   .timeline-note span { color: var(--gold); margin-right: 8px; }
-  .quote-band { text-align: center; background: linear-gradient(#321319d9,#321319e8), url("./pictures/3.jpg") center / cover; color: #fff8ed; padding: 75px 20px; }
+  .quote-band { text-align: center; background: linear-gradient(#321319d9,#321319e8), url("./pictures/new/8.jpg") center / cover; color: #fff8ed; padding: 75px 20px; }
   .quote-mark { font-family: Georgia,serif; color: var(--gold); font-size: 70px; height: 45px; }
   .quote-band p { font-family: "Cormorant Garamond",serif; font-size: clamp(30px,5vw,45px); line-height: 1.2; margin: 10px 0 25px; }
   .quote-band span { font-size: 8px; letter-spacing: .25em; color: #e1c28c; }
