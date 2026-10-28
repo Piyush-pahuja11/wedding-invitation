@@ -198,3 +198,26 @@
     .reveal-section { opacity: 1; transform: none; }
   }
   
+
+  
+/* Elegant matching calligraphy for both names */
+#welcomeTitle span,
+#brideHero,
+#groomHero,
+#closingNames {
+  font-family: "Allura", cursive;
+  font-weight: 400;
+}
+
+/* Keep both names equally beautiful and balanced */
+#welcomeTitle span {
+  font-size: 1em;
+}
+
+.hero h1 > span:not(.parent-details) {
+  font-family: "Allura", cursive;
+}
+
+#closingNames {
+  font-size: 43px;
+}
