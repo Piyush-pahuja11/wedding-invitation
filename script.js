@@ -24,7 +24,7 @@ const wedding = {
   whatsappNumber: "YOUR_WHATSAPP_NUMBER",
 
   // Music file path relative to your website.
-  musicUrl: "./pictures/audios/Satranga.mp3"
+  musicUrl: "./pictures/audios/kudmai.mp3"
 };
 
 
