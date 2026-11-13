@@ -118,38 +118,24 @@ async function openInvitation() {
 
   invitationOpened = true;
 
-  // Start the closing animation.
+  // Start the opening-screen closing animation.
   screen.classList.add("welcome-screen--closing");
-
   document.body.classList.remove("welcome-open");
 
-  // Start music after the user's click.
+  // Play wedding music when the visitor clicks Open Invitation.
   const audio = byId("weddingMusic");
 
-  if (audio && wedding.musicUrl) {
+  if (audio) {
     try {
-      // await audio.play();
-
-      const musicButton = byId("musicToggle");
-
-      if (musicButton) {
-        musicButton.setAttribute("aria-pressed", "true");
-
-        const label = musicButton.querySelector("span");
-
-        if (label) {
-          label.textContent = "Music on";
-        }
-      }
+      audio.volume = 0.5;
+      await audio.play();
+      console.log("Wedding music is playing.");
     } catch (error) {
-      console.warn(
-        "Music could not autoplay. Check the audio file path or use the music button.",
-        error
-      );
+      console.error("Could not play wedding music:", error);
     }
   }
 
-  // Wait for the welcome screen animation to finish.
+  // Wait for the animation to finish, then hide the welcome screen.
   window.setTimeout(() => {
     screen.hidden = true;
 
@@ -163,57 +149,36 @@ async function openInvitation() {
 }
 
 
+
 /* =========================================
    BACKGROUND MUSIC BUTTON
    Optional button with id="musicToggle"
    ========================================= */
 
-function setupMusic() {
-  const button = byId("musicToggle");
-  const audio = byId("weddingMusic");
 
-  if (!button || !audio) {
-    return;
-  }
-
-  const label = button.querySelector("span");
-
-  button.addEventListener("click", async () => {
-    if (!wedding.musicUrl) {
-      if (label) {
-        label.textContent = "Add music URL in script.js";
-      }
-
-      return;
-    }
-
-    if (audio.paused) {
+   function setupMusic() {
+    const audio = byId("weddingMusic");
+  
+    if (!audio) return;
+  
+    audio.volume = 0.5;
+  
+    // Attempt to start music as soon as the page loads.
+    const startMusic = async () => {
       try {
         await audio.play();
-
-        if (label) {
-          label.textContent = "Music on";
-        }
-
-        button.setAttribute("aria-pressed", "true");
+        console.log("Wedding music started.");
       } catch (error) {
-        console.error("Unable to play wedding music:", error);
-
-        if (label) {
-          label.textContent = "Tap to play";
-        }
+        console.warn(
+          "Autoplay was blocked by the browser. Visitor interaction is required.",
+          error
+        );
       }
-    } else {
-      audio.pause();
-
-      if (label) {
-        label.textContent = "Music off";
-      }
-
-      button.setAttribute("aria-pressed", "false");
-    }
-  });
-}
+    };
+  
+    startMusic();
+  }
+  
 
 
 /* =========================================
