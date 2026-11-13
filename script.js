@@ -5,7 +5,7 @@
 
 /* PERSONALISE YOUR WEDDING INVITATION HERE */
 const wedding = {
-  bride: "Amandeep",
+  bride: "Aman",
   groom: "Piyush",
 
   // December 1, 2026, at 7:00 PM India Standard Time
@@ -64,12 +64,12 @@ function applyWeddingDetails() {
 
   setText(
     "closingNames",
-    `${wedding.groom} & ${wedding.bride}`
+    `${wedding.bride} & ${wedding.groom}`
   );
 
   setText(
     "footerNames",
-    `${wedding.groom} & ${wedding.bride}`
+    `${wedding.bride} & ${wedding.groom}`
   );
 
   setText("venueName", wedding.venue);
@@ -84,7 +84,7 @@ function applyWeddingDetails() {
   }
 
   document.title =
-    `${wedding.groom} & ${wedding.bride} | Wedding Invitation`;
+    `${wedding.bride} & ${wedding.groom} | Wedding Invitation`;
 
   const audio = byId("weddingMusic");
 
